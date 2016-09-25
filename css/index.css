@@ -2,18 +2,16 @@
 
 /* HERO */
 h1 {
-  font-family: Grad, Georgia;
+  font-family: 'Grad', Georgia;
 }
 
 .hero-box {
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: -10px;
-}
-
-.hero {
-  width: 100%;
-  background-color: #ededed;
+  height: 100vh;
+  margin: 10px 0 0 0;
+  background: url('../img/blackbird-hero-alternate.png') repeat-x;
+  background-size: 100% auto;
+  background-position: center bottom;
 }
 
 /* END HERO */
