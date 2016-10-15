@@ -1,6 +1,141 @@
 $default-background-color:			#fff;
 $default-color:						#000;
+$default-font-size:					14px;
+$default-font-stack:				monospace, Helvetica, Arial, sans-serif;
+$default-page-width:				1140px;
+$default-page-padding:				30px;
+
+$header-height:						64px;
+
+.container {
+	max-width: $default-page-width;
+	margin: 0 auto; padding: 0 $default-page-padding;
+	display: block;
+	position: relative;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+	font-family: $default-font-stack;
+}
 
 body {
+	font-size: $default-font-size;
 	background: $default-background-color;
+	color: $default-color;
+}
+
+nav.header {
+	width: 100%; height: $header-height;
+	position: absolute;
+	top: 0;
+	font-family: monospace;
+	background: none;
+	color: #fff;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	h1 {
+		font-weight: normal;
+		margin: 0;
+	}
+
+	&>.container {
+		text-align: right;
+
+		&>* {
+			display: inline-block;
+			line-height: $header-height;
+		}
+	}
+	.title {
+		position: absolute;
+		left: $default-page-padding;
+		font-size: 1.333em;
+	}
+	ul.menu {
+		margin: 0; padding: 0;
+		list-style: none;
+
+		&>li {
+			margin-left: 16px;
+			display: inline-block;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+section.banner {
+	width: 100%; height: 400px;
+	padding-top: $header-height;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: #000;
+	// background-image: url('../img/la-outline.svg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+
+	box-sizing: content-box;
+
+	.oneliner {
+		padding-bottom: $header-height; // adjust for when header has background: none
+		font-size: 1.777em;
+		font-weight: normal;
+		user-select: none;
+
+		.highlight {
+			font-weight: bold;
+			background: #fff;
+			color: #000;
+		}
+	}
+}
+
+section.content {
+	padding: 80px 0 0;
+	text-align: left;
+
+	h2 {
+		margin: 0 0 20px;
+		display: inline-block;
+		font-size: 1.777em;
+		font-weight: normal;
+		background: #000;
+		color: #fff;
+	}
+	p {
+		margin: 0 0 20px;
+		line-height: 1.4em;
+	}
+}
+section.whatwedo {
+
+}
+
+section.values {
+	.pure-g {
+		text-align: center;
+	}
+}
+
+footer.footer {
+	padding-top: 80px;
 }

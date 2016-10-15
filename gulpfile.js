@@ -45,6 +45,7 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/css/'))
+    .pipe(browserSync.stream())
 });
 
 gulp.task('scripts', function() {
