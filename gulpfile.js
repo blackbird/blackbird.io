@@ -14,6 +14,7 @@ var browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function() {
     return browserSync({
+        port: 8080,
         server: {
             baseDir: './dist'
         }
