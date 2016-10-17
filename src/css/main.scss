@@ -236,7 +236,9 @@ section.values {
 	}
 	h3 {
 		margin: 0 0 30px;
-		line-height: 2em;
+		font-size: 1.333em;
+		font-family: $default-font-stack-heading;
+		line-height: 1.7em;
 	}
 	.divider {
 		width: 25%; height: 2px;
