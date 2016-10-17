@@ -207,7 +207,7 @@ section.whatwedo {
 		margin-right: 20px;
 	}
 	p {
-		text-indent: 40px;
+		// text-indent: 40px;
 	}
 }
 
@@ -215,15 +215,62 @@ section.work {
 	h2 .icon {
 		margin-right: 20px;
 	}
-	.projects {
-		padding: 0 ($default-page-padding - 10px);
+	.project {
+		margin-bottom: $default-page-padding/2;
+		// padding: 0 $default-page-padding;
 
 		&>* {
 			height: 300px; // TEMP
-			margin-bottom: 20px;
+			&>.card {
+				width: 100%; height: 100%;
+				padding: $default-page-padding;
+				background: #efefef; // TEMP
+			}
+		}
+		&>*:first-child {
+			padding-right: 10px;
+		}
+		&>*:last-child {
+			padding-left: 10px;
+		}
+		.project-info {
+			// padding-right: $default-page-padding/2;
+			text-align: right;
+
+			.card {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background: #000;
+				color: #fff;
+			}
+			h3.project-name {
+				margin: 0 0 10px;
+				font-family: $default-font-stack-heading;
+				font-size: 1.777em;
+				font-weight: 900;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+			}
+			h4.project-client {
+				margin: 0;
+				font-family: $default-font-stack-heading;
+				font-size: 0.75em;
+				font-weight: 400;
+				text-transform: uppercase;
+				letter-spacing: 0.4em;
+			}
+			// p.project-description {
+			// 	// width: 80%;
+			// 	font-family: $default-font-stack-heading;
+			// 	// font-size: 0.9em;
+			// 	// font-style: italic;
+			// 	line-height: 1.5em;
+			// }
 		}
 		.project-screenshots {
-			background: #efefef; // TEMP
+			// background: #efefef; // TEMP
 		}
 	}
 }
@@ -231,8 +278,12 @@ section.work {
 section.values {
 	text-align: left;
 
+	.container {
+
+	}
 	h2 .icon {
 		margin-right: 20px;
+		background: #000;
 	}
 	h3 {
 		margin: 0 0 30px;
@@ -250,7 +301,7 @@ section.values {
 		// margin-bottom: 80px; // only at breakpoint
 	}
 	.pure-g {
-		text-align: center;
+		text-align: left;
 
 		&>* {
 			padding: 0 20px;
@@ -293,8 +344,8 @@ section.team {
 					color: #fff;
 				}
 				.info {
-					width: 100%; height: 15%;
-					padding-left: 30px;
+					width: 100%; height: 17%;
+					padding-left: 25px;
 					position: absolute;
 					right: 10px; bottom : 10px;
 					display: flex;
