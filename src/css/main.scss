@@ -1,11 +1,13 @@
 $default-background-color:			#fff;
 $default-color:						#000;
-$default-font-size:					14px;
-$default-font-stack:				monospace, Helvetica, Arial, sans-serif;
+$default-font-size:					16px;
+$default-font-stack:				'Merriweather', serif;
+$default-font-stack-heading:		'Lato', Helvetica, Arial, sans-serif;
 $default-page-width:				1140px;
 $default-page-padding:				30px;
 
-$header-height:						64px;
+$header-height:						140px;
+$section-padding-tb:				100px;
 
 .container {
 	max-width: $default-page-width;
@@ -25,6 +27,7 @@ body,
 }
 
 body {
+	min-width: 1024px; // TEMP
 	font-size: $default-font-size;
 	background: $default-background-color;
 	color: $default-color;
@@ -32,9 +35,10 @@ body {
 
 nav.header {
 	width: 100%; height: $header-height;
+	min-width: 1024px; // TEMP
 	position: absolute;
 	top: 0;
-	font-family: monospace;
+	font-family: $default-font-stack-heading;
 	background: none;
 	color: #fff;
 
@@ -43,7 +47,7 @@ nav.header {
 		text-decoration: none;
 
 		&:hover {
-			text-decoration: underline;
+			// text-decoration: underline;
 		}
 	}
 	h1 {
@@ -62,30 +66,46 @@ nav.header {
 	.title {
 		position: absolute;
 		left: $default-page-padding;
-		font-size: 1.333em;
+		font-size: 0.75em;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.4em;
+		user-select: none;
+		cursor: default;
 	}
 	ul.menu {
 		margin: 0; padding: 0;
 		list-style: none;
+		font-size: 0.75em;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		user-select: none;
 
 		&>li {
-			margin-left: 16px;
+			margin-left: 24px;
 			display: inline-block;
 
 			&:first-child {
 				margin-left: 0;
+			}
+
+			a {
+				opacity: 0.75;
+
+				transition: opacity 0.2s ease-in-out;
+
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 	}
 }
 
 section.banner {
-	width: 100%; height: 400px;
+	width: 100%; height: 440px;
 	padding-top: $header-height;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
 	background: #000;
 	// background-image: url('../img/la-outline.svg');
 	background-size: contain;
@@ -95,47 +115,210 @@ section.banner {
 
 	box-sizing: content-box;
 
-	.oneliner {
-		padding-bottom: $header-height; // adjust for when header has background: none
-		font-size: 1.777em;
-		font-weight: normal;
-		user-select: none;
+	.container {
+		height: 100%;
+		padding-bottom: $header-height*(2/3); // adjust for header with background: none
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
 
+	.title .word, .subtitle {
+		margin: 0;
+		user-select: none;
+	}
+	.title {
+
+		&>* {
+			display: inline-block;
+		}
+
+		.word {
+			font-family: $default-font-stack-heading;
+			font-size: 4.209em;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+	}
+	.subtitle {
+		margin: 10px 0;
+		// font-size: 1.333em;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		line-height: 1.8em;
+
+		.underline {
+			text-decoration: underline;
+		}
+		.schwa {
+			margin-bottom: -2px; margin-left: -1px; // tweaks to account for rotation
+			display: inline-block;
+			transform: rotate(180deg);
+			vertical-align: middle;
+		}
+		.pofs {
+			font-style: italic;
+		}
+		.num {
+			font-weight: 900;
+		}
 		.highlight {
-			font-weight: bold;
+			margin-right: 0.1em; padding-left: 0.1em; // compensate for letter-spacing
+			font-weight: 700;
 			background: #fff;
 			color: #000;
 		}
 	}
+	img {
+		width: 260px;
+		position: absolute;
+		right: $default-page-padding + 20px;
+		align-self: flex-end;
+
+	}
 }
 
 section.content {
-	padding: 80px 0 0;
+	padding: $section-padding-tb 0 0;
 	text-align: left;
 
 	h2 {
-		margin: 0 0 20px;
+		margin: 0 0 $section-padding-tb/2;
 		display: inline-block;
-		font-size: 1.777em;
-		font-weight: normal;
-		background: #000;
-		color: #fff;
+		font-family: $default-font-stack-heading;
+		font-size: 2.369em;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+
+		.icon {
+			width: 28px; height: 28px;
+			display: inline-block;
+			background: #000;
+		}
 	}
 	p {
-		margin: 0 0 20px;
-		line-height: 1.4em;
+		margin: 0;
+		line-height: 2em;
 	}
 }
 section.whatwedo {
-
+	h2 .icon {
+		margin-right: 20px;
+	}
 }
 
 section.values {
+	text-align: right;
+
+	h2 .icon {
+		margin-left: 20px;
+	}
+	h3 {
+		margin: 0 0 40px;
+		line-height: 2em;
+	}
+	.divider {
+		width: 50%; height: 2px;
+		margin-bottom: 40px;
+		display: inline-block;
+		background: #000;
+	}
+	p {
+	}
 	.pure-g {
 		text-align: center;
+
+		&>* {
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+section.work {
+	h2 .icon {
+		margin-right: 20px;
+	}
+}
+
+section.team {
+	text-align: right;
+
+	h2 .icon {
+		margin-left: 20px;
+	}
+	.profiles {
+		padding: 0 ($default-page-padding - 10px);
+
+		.member {
+			padding: 0 10px 20px;
+			font-size: 0; // fixes extra space at the bottom of the photo
+
+			.photo {
+				position: relative;
+
+				img {
+					width: 100%;
+				}
+				.info, .alumni {
+					font-family: $default-font-stack-heading;
+					font-size: $default-font-size * 0.75;
+					font-weight: 900;
+					text-transform: uppercase;
+					letter-spacing: 0.3em;
+					color: #fff;
+				}
+				.info {
+					width: 100%; height: 15%;
+					position: absolute;
+					bottom : 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: rgba(0,0,0,0.45);
+				}
+				.alumni {
+					padding: 5px 10px 5px 11px;
+					position: absolute;
+					top: 10px; right: 10px;
+					background: #000;
+				}
+			}
+		}
+	}
+}
+
+section.contact {
+	h2 .icon {
+		margin-right: 20px;
 	}
 }
 
 footer.footer {
-	padding-top: 80px;
+	margin-top: $section-padding-tb; padding: $section-padding-tb 0;
+	font-family: $default-font-stack-heading;
+	font-size: 0.75em;
+	letter-spacing: 0.2em;
+	background: #000;
+	color: #fff;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.copy {
+		font-weight: 900;
+	}
+	.la {
+		font-weight: 900;
+
+		.heart {
+			// font-size: $default-font-size;
+			color: #ff007f;
+		}
+	}
 }
