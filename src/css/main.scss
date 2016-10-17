@@ -18,6 +18,10 @@ $section-padding-tb:				100px;
 
 * {
 	box-sizing: border-box;
+
+	&::selection {
+		background: #efefef;
+	}
 }
 
 body,
@@ -323,6 +327,12 @@ section.team {
 			padding: 0 10px 20px;
 			font-size: 0; // fixes extra space at the bottom of the photo
 
+			transition: transform 0.25s ease-in-out;
+
+			&:hover {
+				transform: scale(1.02);
+			}
+
 			.photo {
 				position: relative;
 
@@ -339,12 +349,13 @@ section.team {
 					font-family: $default-font-stack-heading;
 					font-size: $default-font-size * 0.75;
 					font-weight: 900;
-					text-transform: uppercase;
-					letter-spacing: 0.2em;
+					// text-transform: uppercase;
+					letter-spacing: 0.1em;
 					color: #fff;
+					// display: none; // TEMP
 				}
 				.info {
-					width: 100%; height: 17%;
+					width: 100%; height: 14%;
 					padding-left: 25px;
 					position: absolute;
 					right: 10px; bottom : 10px;
@@ -357,7 +368,8 @@ section.team {
 					padding: 5px 10px 5px 11px;
 					position: absolute;
 					top: 10px; right: 10px;
-					background: #000;
+					background: #fff;
+					color: #000;
 
 				}
 			}
@@ -368,6 +380,16 @@ section.team {
 section.contact {
 	h2 .icon {
 		margin-right: 20px;
+	}
+	p.email {
+		font-weight: 700;
+		font-size: 1.777em;
+		text-align: center;
+		letter-spacing: 0.1em;
+
+		a {
+			color: #000;
+		}
 	}
 }
 
