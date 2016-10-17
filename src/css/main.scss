@@ -27,7 +27,6 @@ body,
 }
 
 body {
-	min-width: 1024px; // TEMP
 	font-size: $default-font-size;
 	background: $default-background-color;
 	color: $default-color;
@@ -35,7 +34,6 @@ body {
 
 nav.header {
 	width: 100%; height: $header-height;
-	min-width: 1024px; // TEMP
 	position: absolute;
 	top: 0;
 	font-family: $default-font-stack-heading;
@@ -208,25 +206,46 @@ section.whatwedo {
 	h2 .icon {
 		margin-right: 20px;
 	}
+	p {
+		text-indent: 40px;
+	}
+}
+
+section.work {
+	h2 .icon {
+		margin-right: 20px;
+	}
+	.projects {
+		padding: 0 ($default-page-padding - 10px);
+
+		&>* {
+			height: 300px; // TEMP
+			margin-bottom: 20px;
+		}
+		.project-screenshots {
+			background: #efefef; // TEMP
+		}
+	}
 }
 
 section.values {
-	text-align: right;
+	text-align: left;
 
 	h2 .icon {
-		margin-left: 20px;
+		margin-right: 20px;
 	}
 	h3 {
-		margin: 0 0 40px;
+		margin: 0 0 30px;
 		line-height: 2em;
 	}
 	.divider {
-		width: 50%; height: 2px;
-		margin-bottom: 40px;
+		width: 25%; height: 2px;
+		margin-bottom: 30px;
 		display: inline-block;
 		background: #000;
 	}
 	p {
+		// margin-bottom: 80px; // only at breakpoint
 	}
 	.pure-g {
 		text-align: center;
@@ -238,17 +257,11 @@ section.values {
 	}
 }
 
-section.work {
+section.team {
+	text-align: left;
+
 	h2 .icon {
 		margin-right: 20px;
-	}
-}
-
-section.team {
-	text-align: right;
-
-	h2 .icon {
-		margin-left: 20px;
 	}
 	.profiles {
 		padding: 0 ($default-page-padding - 10px);
@@ -260,6 +273,12 @@ section.team {
 			.photo {
 				position: relative;
 
+				&.is-alumni {
+					opacity: 0.5;
+					.info {
+					}
+				}
+
 				img {
 					width: 100%;
 				}
@@ -268,23 +287,25 @@ section.team {
 					font-size: $default-font-size * 0.75;
 					font-weight: 900;
 					text-transform: uppercase;
-					letter-spacing: 0.3em;
+					letter-spacing: 0.2em;
 					color: #fff;
 				}
 				.info {
 					width: 100%; height: 15%;
+					padding-left: 30px;
 					position: absolute;
-					bottom : 0;
+					right: 10px; bottom : 10px;
 					display: flex;
 					align-items: center;
-					justify-content: center;
-					background: rgba(0,0,0,0.45);
+					justify-content: flex-start;
+					background: #000;
 				}
 				.alumni {
 					padding: 5px 10px 5px 11px;
 					position: absolute;
 					top: 10px; right: 10px;
 					background: #000;
+
 				}
 			}
 		}
