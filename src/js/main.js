@@ -1,6 +1,9 @@
-function scrollTo(elemId, event) {
+function scrollTo(elem, event) {
 	event.preventDefault();
-	document.querySelector('#' + elemId).scrollIntoView({
+
+	var elemTargetId = elem.href.substr(elem.href.indexOf('#'));
+	console.log(elemTargetId);
+	document.querySelector(elemTargetId).scrollIntoView({
 		behavior: 'smooth'
 	});
 }
