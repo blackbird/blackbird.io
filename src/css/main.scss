@@ -277,6 +277,9 @@ section.work {
 			// background: #efefef; // TEMP
 		}
 	}
+	.usc-eats>.project-info>.card {
+		background-image: url('../img/projects/usceats/dining.jpg');
+	}
 }
 
 section.values {
@@ -336,16 +339,16 @@ section.team {
 			.photo {
 				position: relative;
 
-				&.is-alumni {
-					opacity: 0.5;
-					.info {
-					}
-				}
+				// &.is-alumni {
+				// 	opacity: 0.5;
+				// 	.info {
+				// 	}
+				// }
 
 				img {
 					width: 100%;
 				}
-				.info, .alumni {
+				.info, .active, .alumni {
 					font-family: $default-font-stack-heading;
 					font-size: $default-font-size * 0.75;
 					font-weight: 900;
@@ -364,13 +367,12 @@ section.team {
 					justify-content: flex-start;
 					background: #000;
 				}
-				.alumni {
+				.active, .alumni {
 					padding: 5px 10px 5px 11px;
 					position: absolute;
 					top: 10px; right: 10px;
 					background: #fff;
 					color: #000;
-
 				}
 			}
 		}
@@ -382,9 +384,9 @@ section.contact {
 		margin-right: 20px;
 	}
 	p.email {
-		font-weight: 700;
-		font-size: 1.777em;
-		text-align: center;
+		// font-weight: 700;
+		// font-size: 1.777em;
+		// text-align: center;
 		letter-spacing: 0.1em;
 
 		a {
@@ -415,6 +417,18 @@ footer.footer {
 		.heart {
 			// font-size: $default-font-size;
 			color: #ff007f;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	section.values {
+		.value-item {
+			margin-bottom: 60px;
+
+			&.last {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
