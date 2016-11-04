@@ -232,11 +232,6 @@ section.work {
 				background: #efefef; // TEMP
 				background-size: contain;
 
-				.overlay {
-					position: absolute;
-					top: 0; right: 0; bottom : 0; left: 0;
-					background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.6));
-				}
 				h3, h4 {
 					position: relative;
 				}
@@ -259,6 +254,16 @@ section.work {
 				justify-content: center;
 				background: #000;
 				color: #fff;
+
+				background-position: bottom;
+				background-size: cover;
+
+				.overlay {
+					position: absolute;
+					top: 20%; right: 14%; bottom : 20%; left: 14%;
+					// border: 2px solid #fff;
+					background: rgba(0,0,0,0.5);
+				}
 			}
 			h3.project-name {
 				margin: 0 0 10px;
@@ -267,6 +272,8 @@ section.work {
 				font-weight: 900;
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
+
+				// text-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 			}
 			h4.project-client {
 				margin: 0;
@@ -275,6 +282,8 @@ section.work {
 				font-weight: 400;
 				text-transform: uppercase;
 				letter-spacing: 0.4em;
+
+				// text-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 			}
 			// p.project-description {
 			// 	// width: 80%;
@@ -290,6 +299,12 @@ section.work {
 	}
 	.usc-eats>.project-info>.card {
 		background-image: url('../img/projects/usceats/dining.jpg');
+	}
+	.techla>.project-info>.card {
+		background-image: url('../img/projects/techla/la.jpg');
+	}
+	.polly>.project-info>.card {
+		background-image: url('../img/projects/polly/desk.jpg');
 	}
 }
 
@@ -442,7 +457,17 @@ footer.footer {
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+	section.work {
+		.project {
+			&>*:first-child {
+				padding-right: 0;
+			}
+			&>*:last-child {
+				padding-left: 0;
+			}
+		}
+	}
 	section.values {
 		.value-item {
 			margin-bottom: 60px;
