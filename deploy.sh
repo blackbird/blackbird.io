@@ -22,4 +22,4 @@ git commit -m "$msg"
 git push origin master
 
 git subtree add --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git master --squash
-git subtree push --force --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git gh-pages
+git subtree push --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git gh-pages
