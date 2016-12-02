@@ -22,7 +22,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('static', function() {
-    return gulp.src(['src/*.html', 'src/*.js', 'CNAME'])
+    return gulp.src(['src/*.html', 'src/*.js', 'src/CNAME'])
     .pipe(gulp.dest('dist/'))
 });
 
