@@ -17,4 +17,7 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
+
+git subtree add --prefix dist git@github.com:blackbird/blackbirdstudios.io.git master --squash
+
 git subtree push --prefix=public git@github.com:blackbird/blackbirdstudios.io.git gh-pages
