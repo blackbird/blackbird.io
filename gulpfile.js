@@ -66,6 +66,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/js/'))
 });
 
+gulp.task('build', ['styles', 'scripts', 'images', 'static'], function() {
+    gulp.src(['src/favicon.ico'])
+    .pipe(gulp.dest('dist/'));
+});
+
 gulp.task('default', ['styles', 'scripts', 'images', 'static', 'browser-sync'], function() {
     gulp.src(['src/favicon.ico'])
     .pipe(gulp.dest('dist/'));
