@@ -20,4 +20,4 @@ git push origin master
 
 git subtree add --prefix dist git@github.com:blackbird/blackbirdstudios.io.git master --squash
 
-git subtree push --prefix=public git@github.com:blackbird/blackbirdstudios.io.git gh-pages
+git subtree push --prefix=dist git@github.com:blackbird/blackbirdstudios.io.git gh-pages
