@@ -1,8 +1,11 @@
 #!/bin/bash
 
+$TARGET=dist
+
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
+rm -rf $TARGET
 gulp build
 
 # Add changes to git.
@@ -18,6 +21,5 @@ git commit -m "$msg"
 # Push source and build repos.
 git push origin master
 
-git subtree add --prefix dist git@github.com:blackbird/blackbirdstudios.io.git master --squash
-
-git subtree push --prefix=dist git@github.com:blackbird/blackbirdstudios.io.git gh-pages
+git subtree add --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git master --squash
+git subtree push --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git gh-pages
