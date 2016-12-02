@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,900|Merriweather:400,400i,700">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/luminous-basic.min.css">
 </head>
 <body>
     <nav class="header">
@@ -51,7 +52,12 @@
         <div class="pure-g project usc-eats">
             <div class="pure-u-1-1 pure-u-lg-1-3 project-section">
                 <div class="card project-info">
-					<div class="overlay"><button class="screenshots">Screenshots</button></div>
+					<div class="overlay">
+						<a href="img/projects/usceats/usceats-1.png" class="screenshots lightbox-usceats">Screenshots</a>
+						<a href="img/projects/usceats/usceats-2.png" class="lightbox-usceats" style="display:none"></a>
+						<a href="img/projects/usceats/usceats-3.png" class="lightbox-usceats" style="display:none"></a>
+						<a href="img/projects/usceats/usceats-4.png" class="lightbox-usceats" style="display:none"></a>
+					</div>
                     <h3 class="project-name">USC Eats</h3>
                     <h4 class="project-client">USC Hospitality</h4>
                 </div>
@@ -91,7 +97,10 @@
             </div>
             <div class="pure-u-1-1 pure-u-lg-1-3 project-section" id="techla-2">
                 <div class="card project-info">
-                    <div class="overlay"><button class="screenshots">Screenshots</button></div>
+					<div class="overlay">
+						<a href="img/projects/techla/techla-1.png" class="screenshots lightbox-techla">Screenshots</a>
+						<a href="img/projects/techla/techla-2.png" class="lightbox-techla" style="display:none"></a>
+					</div>
                     <h3 class="project-name">TechLA</h3>
                     <h4 class="project-client">Upfront Ventures</h4>
                 </div>
@@ -100,7 +109,11 @@
         <div class="pure-g project polly">
             <div class="pure-u-1-1 pure-u-lg-1-3 project-section">
                 <div class="card project-info">
-					<div class="overlay"><button class="screenshots">Screenshots</button></div>
+					<div class="overlay">
+						<a href="img/projects/polly/polly-1.png" class="screenshots lightbox-polly">Screenshots</a>
+						<a href="img/projects/polly/polly-2.png" class="lightbox-polly" style="display:none"></a>
+
+					</div>
                     <h3 class="project-name">Polly</h3>
                     <h4 class="project-client">Spark SC</h4>
                 </div>
@@ -307,8 +320,9 @@
             <div class="la">Made with <span class="heart">&#10084;</span> in LA.</div>
         </div>
     </footer>
-
+	
     <script src="smooth.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js"></script>
     <script src="js/main.min.js"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

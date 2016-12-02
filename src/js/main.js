@@ -8,6 +8,7 @@ getViewportWidth = function() {
 	return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 };
 
+// TODO: move DOM elements instead of innerHTML so lightbox doesn't break
 swapElementInnerHTML = function(elemRefA, elemRefB) {
 	var temp = elemRefA.innerHTML;
 	elemRefA.innerHTML = elemRefB.innerHTML;
@@ -30,6 +31,11 @@ scrollTo = function(elem, event) {
 		swapElementInnerHTML(techlaSwap[0], techlaSwap[1]);
 		isSwapped = !isSwapped;
 	}
+	
+	new LuminousGallery(document.querySelectorAll('.lightbox-usceats'));
+	new LuminousGallery(document.querySelectorAll('.lightbox-techla'));
+	new LuminousGallery(document.querySelectorAll('.lightbox-polly'));
+
 })();
 
 window.onresize = function() {	
