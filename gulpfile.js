@@ -69,6 +69,8 @@ gulp.task('scripts', function() {
 gulp.task('build', ['styles', 'scripts', 'images', 'static'], function() {
     gulp.src(['src/favicon.ico'])
     .pipe(gulp.dest('dist/'));
+	gulp.src(['src/download/**/*']) // copy over download folder (static HTML files)
+	.pipe(gulp.dest('dist/download'));
 });
 
 gulp.task('default', ['styles', 'scripts', 'images', 'static', 'browser-sync'], function() {
