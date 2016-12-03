@@ -1,4 +1,5 @@
 .container {
+  width: 1140px;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 30px;
@@ -16,6 +17,9 @@ body,
 .pure-g [class*="pure-u"],
 .pure-g-r [class*="pure-u"] {
   font-family: "Merriweather", serif; }
+
+html {
+  min-width: 1024px; }
 
 body {
   font-size: 16px;
@@ -379,13 +383,3 @@ footer.footer {
     font-weight: 900; }
     footer.footer .la .heart {
       color: #ff007f; }
-
-@media screen and (max-width: 1023px) {
-  section.work .project > *:first-child {
-    padding-right: 0; }
-  section.work .project > *:last-child {
-    padding-left: 0; }
-  section.values .value-item {
-    margin-bottom: 60px; }
-    section.values .value-item.last {
-      margin-bottom: 0; } }

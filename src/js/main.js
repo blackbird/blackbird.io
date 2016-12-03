@@ -27,10 +27,10 @@ scrollTo = function(elem, event) {
 
 // Primary functions
 (function() {
-	if(getViewportWidth() < BREAKPOINT) {
-		swapElementInnerHTML(techlaSwap[0], techlaSwap[1]);
-		isSwapped = !isSwapped;
-	}
+	// if(getViewportWidth() < BREAKPOINT) {
+	// 	swapElementInnerHTML(techlaSwap[0], techlaSwap[1]);
+	// 	isSwapped = !isSwapped;
+	// }
 	
 	new LuminousGallery(document.querySelectorAll('.lightbox-usceats'));
 	new LuminousGallery(document.querySelectorAll('.lightbox-techla'));
@@ -39,8 +39,8 @@ scrollTo = function(elem, event) {
 })();
 
 window.onresize = function() {	
-	if((getViewportWidth() < BREAKPOINT && !isSwapped) || (getViewportWidth() >= BREAKPOINT && isSwapped)) {
-		swapElementInnerHTML(techlaSwap[0], techlaSwap[1]);
-		isSwapped = !isSwapped;
-	}
+	// if((getViewportWidth() < BREAKPOINT && !isSwapped) || (getViewportWidth() >= BREAKPOINT && isSwapped)) {
+	// 	swapElementInnerHTML(techlaSwap[0], techlaSwap[1]);
+	// 	isSwapped = !isSwapped;
+	// }
 };
