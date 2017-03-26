@@ -19,7 +19,7 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin master
+git push origin master --force
 
-git subtree add --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git master --squash
+# git subtree add --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git master --squash
 git subtree push --prefix=$TARGET git@github.com:blackbird/blackbirdstudios.io.git gh-pages
