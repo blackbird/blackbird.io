@@ -274,6 +274,10 @@ section.work {
 				background: rgba(0,0,0,0.5);
 			}
 		}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 		h3.project-name {
 			margin: 0 0 10px;
 			font-family: $default-font-stack-heading;
@@ -317,17 +321,17 @@ section.work {
 		// 	// font-style: italic;
 		// 	line-height: 1.5em;
 		// }
-		
+
 		.card.project-screenshots {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			background: #fbfbfb;
-			
+
 			.card-content {
 				margin: 0 32px;
 				position: relative;
-				
+
 				p.description {
 					margin-bottom: 16px;
 					line-height: 1.8em;
@@ -338,11 +342,11 @@ section.work {
 					font-family: $default-font-stack-heading;
 					font-weight: 700;
 					list-style: none;
-					
+
 					li {
 						margin-right: 16px;
 						display: inline-block;
-						
+
 						i {
 							margin-right: 2px;
 							font-size: 0.8em; // make icons slightly smaller than type
@@ -526,7 +530,7 @@ footer.footer {
 // 	section.values {
 // 		.value-item {
 // 			margin-bottom: 60px;
-// 
+//
 // 			&.last {
 // 				margin-bottom: 0;
 // 			}

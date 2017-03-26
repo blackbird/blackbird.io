@@ -207,6 +207,9 @@ section.work .project {
       bottom: 20%;
       left: 14%;
       background: rgba(0, 0, 0, 0.5); }
+  section.work .project a {
+    text-decoration: none;
+    color: inherit; }
   section.work .project h3.project-name {
     margin: 0 0 10px;
     font-family: "Lato", Helvetica, Arial, sans-serif;
