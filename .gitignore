@@ -1,6 +1,0 @@
-# Build files
-/node_modules
-
-# System files
-npm-debug.log
-.DS_Store

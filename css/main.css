@@ -1,0 +1,388 @@
+.container {
+  width: 1140px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: block;
+  position: relative; }
+
+* {
+  box-sizing: border-box; }
+  *::-moz-selection {
+    background: #efefef; }
+  *::selection {
+    background: #efefef; }
+
+body,
+.pure-g [class*="pure-u"],
+.pure-g-r [class*="pure-u"] {
+  font-family: "Merriweather", serif; }
+
+html {
+  min-width: 1024px; }
+
+body {
+  font-size: 16px;
+  background: #fff;
+  color: #000; }
+
+nav.header {
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background: none;
+  color: #fff; }
+  nav.header a {
+    color: inherit;
+    text-decoration: none; }
+  nav.header h1 {
+    font-weight: normal;
+    margin: 0; }
+  nav.header > .container {
+    text-align: right; }
+    nav.header > .container > * {
+      display: inline-block;
+      line-height: 140px; }
+  nav.header .title {
+    position: absolute;
+    left: 30px;
+    font-size: 0.75em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: default; }
+  nav.header ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.75em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    nav.header ul.menu > li {
+      margin-left: 24px;
+      display: inline-block; }
+      nav.header ul.menu > li:first-child {
+        margin-left: 0; }
+      nav.header ul.menu > li a {
+        opacity: 0.75;
+        transition: opacity 0.2s ease-in-out; }
+        nav.header ul.menu > li a:hover {
+          opacity: 1; }
+
+section.banner {
+  width: 100%;
+  height: 440px;
+  padding-top: 140px;
+  background: #000;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  box-sizing: content-box; }
+  section.banner .container {
+    height: 100%;
+    padding-bottom: 93.33333px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  section.banner .title .word, section.banner .subtitle {
+    margin: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  section.banner .title > * {
+    display: inline-block; }
+  section.banner .title .word {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 4.209em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
+  section.banner .subtitle {
+    margin: 10px 0;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.8em; }
+    section.banner .subtitle .underline {
+      text-decoration: underline; }
+    section.banner .subtitle .schwa {
+      margin-bottom: -2px;
+      margin-left: -1px;
+      display: inline-block;
+      transform: rotate(180deg);
+      vertical-align: middle; }
+    section.banner .subtitle .pofs {
+      font-style: italic; }
+    section.banner .subtitle .num {
+      font-weight: 900; }
+    section.banner .subtitle .highlight {
+      margin-right: 0.1em;
+      padding-left: 0.1em;
+      font-weight: 700;
+      background: #fff;
+      color: #000; }
+  section.banner img {
+    width: 260px;
+    position: absolute;
+    right: 50px;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+
+section.content {
+  padding: 100px 0 0;
+  text-align: left; }
+  section.content h2 {
+    margin: 0 0 50px;
+    display: inline-block;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 2.369em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+    section.content h2 .icon {
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+      background: #000; }
+  section.content p {
+    margin: 0;
+    line-height: 1.9em; }
+
+section.whatwedo h2 .icon {
+  margin-right: 20px; }
+
+section.work h2 .icon {
+  margin-right: 20px; }
+
+section.work .project {
+  margin-bottom: 20px; }
+  section.work .project > * {
+    height: 300px; }
+    section.work .project > * > .card {
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      position: relative;
+      background-size: contain; }
+      section.work .project > * > .card h3, section.work .project > * > .card h4 {
+        position: relative; }
+  section.work .project > *:first-child {
+    padding-right: 10px; }
+  section.work .project > *:last-child {
+    padding-left: 10px; }
+  section.work .project .card.project-info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    background: #000;
+    color: #fff;
+    background-position: bottom;
+    background-size: cover; }
+    section.work .project .card.project-info .overlay {
+      position: absolute;
+      top: 20%;
+      right: 14%;
+      bottom: 20%;
+      left: 14%;
+      background: rgba(0, 0, 0, 0.5); }
+  section.work .project a {
+    text-decoration: none;
+    color: inherit; }
+  section.work .project h3.project-name {
+    margin: 0 0 10px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 1.777em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
+  section.work .project h4.project-client {
+    margin: 0;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.4em; }
+  section.work .project a.screenshots {
+    width: 150px;
+    height: 32px;
+    margin-left: -75px;
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    border: none;
+    font-size: 0.75em;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    background: #fff;
+    color: #000; }
+  section.work .project .card.project-screenshots {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    background: #fbfbfb; }
+    section.work .project .card.project-screenshots .card-content {
+      margin: 0 32px;
+      position: relative; }
+      section.work .project .card.project-screenshots .card-content p.description {
+        margin-bottom: 16px;
+        line-height: 1.8em; }
+      section.work .project .card.project-screenshots .card-content ul.techstack {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        list-style: none; }
+        section.work .project .card.project-screenshots .card-content ul.techstack li {
+          margin-right: 16px;
+          display: inline-block; }
+          section.work .project .card.project-screenshots .card-content ul.techstack li i {
+            margin-right: 2px;
+            font-size: 0.8em; }
+
+section.work .usc-eats > .project-section > .card.project-info {
+  background-image: url("../img/projects/usceats/dining.jpg"); }
+
+section.work .techla > .project-section > .card.project-info {
+  background-image: url("../img/projects/techla/la.jpg"); }
+
+section.work .polly > .project-section > .card.project-info {
+  background-image: url("../img/projects/polly/desk.jpg"); }
+
+section.values {
+  text-align: left; }
+  section.values h2 .icon {
+    margin-right: 20px;
+    background: #000; }
+  section.values h3 {
+    margin: 0 0 30px;
+    font-size: 1.333em;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    line-height: 1.7em; }
+  section.values .divider {
+    width: 25%;
+    height: 2px;
+    margin-bottom: 30px;
+    display: inline-block;
+    background: #000; }
+  section.values .pure-g {
+    text-align: left; }
+    section.values .pure-g > * {
+      padding: 0 20px;
+      box-sizing: border-box; }
+
+section.team {
+  text-align: left; }
+  section.team h2 .icon {
+    margin-right: 20px; }
+  section.team .profiles {
+    padding: 0 20px; }
+    section.team .profiles .member {
+      padding: 0 10px 20px;
+      font-size: 0; }
+      section.team .profiles .member .photo {
+        position: relative;
+        transition: transform 0.24s ease-in-out; }
+        section.team .profiles .member .photo:hover {
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+          transform: scale(1.02); }
+          section.team .profiles .member .photo:hover .info {
+            opacity: 1; }
+        section.team .profiles .member .photo:active {
+          transform: scale(1); }
+        section.team .profiles .member .photo .linkedin {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0; }
+        section.team .profiles .member .photo img {
+          width: 100%; }
+        section.team .profiles .member .photo .info, section.team .profiles .member .photo .active, section.team .profiles .member .photo .alumni {
+          font-family: "Lato", Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          font-weight: 900;
+          letter-spacing: 0.1em;
+          color: #fff; }
+        section.team .profiles .member .photo .info {
+          width: 100%;
+          height: 14%;
+          padding-left: 25px;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+              align-items: center;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+          background: #000;
+          transition: opacity 0.12s ease-in-out 0s;
+          opacity: 0; }
+        section.team .profiles .member .photo .active, section.team .profiles .member .photo .alumni {
+          padding: 5px 10px 5px 11px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: #fff;
+          color: #000; }
+
+section.contact h2 .icon {
+  margin-right: 20px; }
+
+section.contact p.email {
+  letter-spacing: 0.1em; }
+  section.contact p.email a {
+    color: #000; }
+
+footer.footer {
+  margin-top: 100px;
+  padding: 100px 0;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  letter-spacing: 0.2em;
+  background: #000;
+  color: #fff; }
+  footer.footer .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  footer.footer .copy {
+    font-weight: 900; }
+  footer.footer .la {
+    font-weight: 900; }
+    footer.footer .la .heart {
+      color: #ff007f; }
